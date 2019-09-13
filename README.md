@@ -47,7 +47,7 @@ urlpatterns = [
   path('admin/', admin.site.urls),
   path('주소', app_name.views.home, name="home"),   #주소가 공백일 경우 홈 페이지 #app_name의 views.py 안의 home 함수 #그 이름은 home
 ]
-
+```
 * template Tag : {% url 'url view name'%}
 * template variable : {{variable}}
 * template for loop : {% for a in b %} ... {%endfor%}
