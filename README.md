@@ -8,13 +8,42 @@
 3. 내용 복사(굳이 전체 복사 안해도 됨)
 
 
+# django 시작
+  1. 폴더 하나 생성
+  2.
+  ```
+    $ python -m venv myvenv
+    $ source myvenv/Scripts/activate
+    $ pip install django
+    $ django-admin startproject project_name
+    $ cd project_name
+    $ python manage.py startapp app_name
+  ```
+  3. project 폴더 안의 settings.py 수정
+```{.python}
+    INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    <!--여기까지 동일-->
+    'app_name.apps.App_nameConfig'
+    ]
+```
+  *project를 생성하면 프로젝트 폴더 안에 똑같은 이름의 폴더가 또 있는데 이때 큰 프로젝트 폴더의 이름을 바꿔주면 덜 헷갈린다.*
+
+
 # django를 이용하여 python과 html 연결
 * template Tag : {% url 'url view name'%}
 * template variable : {{variable}}
 * template for loop : {% for a in b %} ... {%endfor%}
 
+
 ## python dictionary
 * key 값과 value 값을 저장하는 파이썬의 자료형
+
 
 ## python 문법 (in Django)
 1. 'home.html'에 있는 textarea에서 text 가져오는 법
