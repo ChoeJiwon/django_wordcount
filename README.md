@@ -31,7 +31,7 @@
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    <!--여기까지 동일-->
+    #여기까지 동일
     'app_name.apps.App_nameConfig'
     ]
 ```
