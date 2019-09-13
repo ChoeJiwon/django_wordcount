@@ -19,6 +19,9 @@
     $ cd project_name
     $ python manage.py startapp app_name
   ```
+  
+  *project를 생성하면 프로젝트 폴더 안에 똑같은 이름의 폴더가 또 있는데 이때 큰 프로젝트 폴더의 이름을 바꿔주면 덜 헷갈린다.*
+  
   3. project 폴더 안의 settings.py 수정
 ```{.python}
     INSTALLED_APPS = [
@@ -32,8 +35,8 @@
     'app_name.apps.App_nameConfig'
     ]
 ```
-  *project를 생성하면 프로젝트 폴더 안에 똑같은 이름의 폴더가 또 있는데 이때 큰 프로젝트 폴더의 이름을 바꿔주면 덜 헷갈린다.*
-
+  4. 서버 실행
+  `$ python manage.py runserver`
 
 # django를 이용하여 python과 html 연결
 * template Tag : {% url 'url view name'%}
