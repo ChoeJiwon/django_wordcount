@@ -39,6 +39,15 @@
   `$ python manage.py runserver`
 
 # django를 이용하여 python과 html 연결
+*가장 먼저 project 내부의 project 폴더 안에 있는 urls.py에 코드 추가*
+```{.python}
+import app_name.views     #앱의 views.py 추가
+
+urlpatterns = [
+  path('admin/', admin.site.urls),
+  path('주소', app_name.views.home, name="home"),   #주소가 공백일 경우 홈 페이지 #app_name의 views.py 안의 home 함수 #그 이름은 home
+]
+
 * template Tag : {% url 'url view name'%}
 * template variable : {{variable}}
 * template for loop : {% for a in b %} ... {%endfor%}
